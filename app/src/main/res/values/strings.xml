@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">MangaCollectionApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    //nav menu
+    <string name="my_collection_nav_bar_menu">My collection</string>
+    <string name="search_nav_bar_menu">Search</string>
+
+    //search fragment
+    <string name="search_manga_hint">Search manga</string>
+
+    //manga details fragment
+    <string name="synopsis">Synopsis</string>
+    <string name="add_manga">Add manga</string>
+
+    //NoUnderlineClickSpan
+    <string name="resizable_text_read_more">… read more</string>
+    <string name="resizable_text_read_less">… read less</string>
+
+    //status
+    <string name="unowned_status">Unowned</string>
+    <string name="owned_status">Owned</string>
+    <string name="subscribed_status">Subscribed</string>
+    <string name="volume_title">Volume</string>
+
+    <string name="add_volume">Add volume</string>
+
+    <string name="add_volume_dialog_title">Choose volumes number and status</string>
+    <string name="add_volume_dialog_number">Volumes:</string>
+    <string name="add_volume_dialog_status">Status:</string>
+    <string name="counter_start">0</string>
+    <string name="add_volume_dialog_confirm">Confirm</string>
+    <string name="add_volume_dialog_cancel">Cancel</string>
+
+    <string name="in_progress_manga_status">InProgress</string>
+    <string name="completed_manga_status">Completed</string>
+    <string name="wanted_manga_status">Wanted</string>
+    <string name="show_all_mangas">Show all</string>
+
+    <string name="add_manga_dialog_title">Choose manga status</string>
+
+    <string name="change_volume_status">Change status</string>
+    <string name="remove_volume">Remove volumes</string>
+
+    <string name="change_volume_status_dialog_title">Change Volume status</string>
+
+    <string name="remove_volume_dialog_title">How many to remove?</string>
+
+
+    <string name="delete_manga">Delete</string>string>
+    <string name="delete_manga_confirm_dialog_title">Are you sure?</string>
+    <string name="delete_manga_confirm_dialog_information">This operation will remove manga with all its volumes.</string>
+
+    <string name="import_database">Import database</string>
+    <string name="import_database_success_communicat">Database imported successfully.</string>
+    <string name="import_database_failure_communicat">Database import failed.</string>
+    <string name="import_database_dialog_title">Are you sure?</string>
+    <string name="import_database_dialog_body">This operation will overwrite existing database. Continue?</string>
+
+    <string name="export_database">Export database</string>
+    <string name="export_database_success_communicat">Database exported successfully.</string>
+    <string name="export_database_failure_communicat">Database export failed.</string>
+
+
+
+    <string-array name="add_volume_spinner_options">
+        <item>Unowned</item>
+        <item>Owned</item>
+        <item>Preorder</item>
+    </string-array>
+
+    <string-array name="user_manga_list_group_spinner_options">
+        <item>Show all</item>
+        <item>Completed</item>
+        <item>In progress</item>
+        <item>Wanted</item>
+    </string-array>
+
+    <string-array name="add_manga_dialog_spinner_options">
+        <item>Completed</item>
+        <item>In progress</item>
+        <item>Wanted</item>
+    </string-array>
+
+
+</resources>

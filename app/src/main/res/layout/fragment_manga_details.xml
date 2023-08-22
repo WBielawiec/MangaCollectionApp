@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.MangaDetailsFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/manga_details_toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/manga_details_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:menu="@menu/manga_details_toolbar_menu">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/manga_details_toolbar_layout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/scroll_view_constraint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/manga_details_title_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/scroll_view_constraint_layout"
+                app:layout_constraintTop_toTopOf="@+id/scroll_view_constraint_layout" />
+
+            <TextView
+                android:id="@+id/manga_details_author_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="@+id/manga_details_title_text_view"
+                app:layout_constraintStart_toStartOf="@+id/manga_details_title_text_view"
+                app:layout_constraintTop_toBottomOf="@+id/manga_details_title_text_view" />
+
+            <ImageView
+                android:id="@+id/manga_details_cover_image_view"
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/baseline_library_books_24"
+                app:layout_constraintEnd_toEndOf="@+id/manga_details_author_text_view"
+                app:layout_constraintStart_toStartOf="@+id/manga_details_author_text_view"
+                app:layout_constraintTop_toBottomOf="@+id/manga_details_author_text_view" />
+
+            <TextView
+                android:id="@+id/manga_details_synopsis_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/manga_details_author_text_view"
+                app:layout_constraintStart_toStartOf="@+id/manga_details_author_text_view"
+                app:layout_constraintTop_toBottomOf="@+id/manga_details_cover_image_view" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

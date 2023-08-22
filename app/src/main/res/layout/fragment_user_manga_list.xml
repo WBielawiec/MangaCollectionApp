@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.UserMangaListFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/user_manga_list_appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/user_manga_list_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:visibility="visible"
+            app:menu="@menu/user_manga_list_toolbar_menu">
+
+<!--            <SearchView
+                android:id="@+id/manga_search_view"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="18dp"
+                android:layout_height="40dp"
+                android:queryHint="@string/search_manga_hint"
+                android:iconifiedByDefault="false"
+                android:background="@drawable/rounded_corners_search_view"
+                app:iconifiedByDefault="false" />-->
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/user_manga_list_change_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:visibility="gone"
+            app:menu="@menu/user_manga_list_change_toolbar_menu">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/user_manga_list_adapter_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_manga_list_appBarLayout">
+
+        <Spinner
+            android:id="@+id/user_manga_list_group_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@drawable/spinner_border"
+            android:entries="@array/user_manga_list_group_spinner_options" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/user_manga_list_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

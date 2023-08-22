@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/change_manga_status"
+        android:title="@string/change_volume_status"
+        android:visible="true"/>
+    <item
+        android:id="@+id/delete_manga"
+        android:title="@string/delete_manga"
+        android:visible="true"/>
+</menu>

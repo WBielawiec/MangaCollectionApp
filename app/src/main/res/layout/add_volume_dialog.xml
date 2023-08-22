@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <TextView
+        android:id="@+id/add_volume_dialog_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_volume_dialog_title"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:id="@+id/first_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        android:layout_below="@id/add_volume_dialog_title_textview"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/add_volume_dialog_volume_number_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="@string/add_volume_dialog_number"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/add_volume_dialog_decrement_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/baseline_remove_24" />
+
+            <TextView
+                android:id="@+id/add_volume_dialog_counter_textview"
+                android:layout_width="30dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_height="match_parent"
+                android:text="@string/counter_start"
+                android:textSize="18sp"
+                android:paddingStart="4dp"
+                android:paddingEnd="5dp"/>
+
+            <ImageView
+                android:id="@+id/add_volume_dialog_increment_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/baseline_add_24"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/second_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="12dp"
+
+        android:layout_below="@id/first_linear_layout"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/add_volume_dialog_status_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="@string/add_volume_dialog_status"
+            android:textColor="@color/black"/>
+
+        <Spinner
+            android:id="@+id/add_volume_dialog_status_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAlignment="textEnd"
+            android:entries="@array/add_volume_spinner_options"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/third_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:layout_below="@id/second_linear_layout"
+        android:paddingEnd="25dp"
+        android:gravity="end"
+        tools:ignore="RtlSymmetry">
+
+        <Button
+            android:id="@+id/add_volume_dialog_confirmation_button"
+            android:layout_width="wrap_content"
+            android:text="@string/add_volume_dialog_confirm"
+            android:layout_height="36dp"/>
+
+        <Button
+            android:id="@+id/add_volume_dialog_cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/add_volume_dialog_cancel"
+            android:layout_height="36dp"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

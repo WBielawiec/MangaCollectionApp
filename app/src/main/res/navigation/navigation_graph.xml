@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/userMangaList">
+    <fragment
+        android:id="@+id/mangaSearchFragment"
+        android:name="com.example.mangacollectionapp.views.MangaSearchFragment"
+        android:label="fragment_manga_search"
+        tools:layout="@layout/fragment_manga_search" >
+        <action
+            android:id="@+id/action_mangaSearchFragment_to_mangaDetailsFragment"
+            app:destination="@id/mangaDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mangaDetailsFragment"
+        android:name="com.example.mangacollectionapp.views.MangaDetailsFragment"
+        android:label="fragment_manga_details"
+        tools:layout="@layout/fragment_manga_details" >
+        <argument
+            android:name="mangaObject"
+            app:argType="com.example.mangacollectionapp.models.Manga"
+            app:nullable="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/userMangaList"
+        android:name="com.example.mangacollectionapp.views.UserMangaListFragment"
+        android:label="fragment_user_manga_list"
+        tools:layout="@layout/fragment_user_manga_list" >
+        <action
+            android:id="@+id/action_userMangaList_to_userMangaVolumesFragment"
+            app:destination="@id/userMangaVolumesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userMangaVolumesFragment"
+        android:name="com.example.mangacollectionapp.views.UserMangaVolumesFragment"
+        android:label="fragment_user_manga_volumes"
+        tools:layout="@layout/fragment_user_manga_volumes" >
+        <argument
+            android:name="mangaObject"
+            app:argType="com.example.mangacollectionapp.models.Manga" />
+    </fragment>
+</navigation>
